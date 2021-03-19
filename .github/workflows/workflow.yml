@@ -28,8 +28,10 @@ jobs:
 
       - name: Get the version number
         uses: actions/github-script@main
-        run: "::set-output name=VERNUM::$(awk -F'\"' '/version_number/ { print $4 }' manifest.json)"
         id: version-number
+        with:
+          script: return "awk -F'\"' '/version_number/ { print $4 }' manifest.json"
+          result-encoding: string
 
       - name: Compress the files into a zip archive
         uses: thedoctor0/zip-release@master
