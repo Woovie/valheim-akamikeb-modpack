@@ -1,0 +1,10 @@
+{
+    "name": "BroheimModpack",
+    "version_number": "1.0.0",
+    "website_url": "https://discord.com/invite/akamikeb",
+    "description": "A modpack for the akamikeb community",
+    "dependencies": [
+        "Smoothbrain-CreatureLevelAndLootControl-1.7.1",
+        "RandyKnapp-EpicLoot-0.5.16"
+    ]
+}
