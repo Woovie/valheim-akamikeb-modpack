@@ -41,3 +41,4 @@ jobs:
         with:
           artifacts: "BroheimModpack-${{steps.version-number.outputs.VERNUM}}.zip"
           token: ${{secrets.GITHUB_TOKEN}}
+          tag: v${{steps.version-number.outputs.VERNUM}}
