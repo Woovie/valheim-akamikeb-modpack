@@ -33,15 +33,18 @@ jobs:
           script: return "awk -F'\"' '/version_number/ { print $4 }' manifest.json"
           result-encoding: string
 
-      - name: Compress the files into a zip archive
-        uses: thedoctor0/zip-release@master
-        with:
-          filename: "BroheimModpack-${{steps.version-number.outputs.VERNUM}}.zip"
-          exclusions: "*.git*"
+      - name: Test version output
+        runs: "echo ${{steps.version-number.outputs.result}}"
+
+#      - name: Compress the files into a zip archive
+#        uses: thedoctor0/zip-release@master
+#        with:
+#          filename: "BroheimModpack-${{steps.version-number.outputs.result}}.zip"
+#          exclusions: "*.git*"
         
-      - name: Upload artifacts as release
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "BroheimModpack-${{steps.version-number.outputs.VERNUM}}.zip"
-          token: ${{secrets.GITHUB_TOKEN}}
-          tag: v${{steps.version-number.outputs.VERNUM}}
+#      - name: Upload artifacts as release
+#        uses: ncipollo/release-action@v1
+#        with:
+#          artifacts: "BroheimModpack-${{steps.version-number.outputs.result}}.zip"
+#          token: ${{secrets.GITHUB_TOKEN}}
+#          tag: v${{steps.version-number.outputs.VERNUM}}
