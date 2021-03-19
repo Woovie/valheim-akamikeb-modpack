@@ -29,18 +29,15 @@ jobs:
       - name: Get the version number
         run: echo "VERNUM=$(awk -F'\"' '/version_number/ { print $4 }' manifest.json)" >> $GITHUB_ENV
 
-      - name: Test version output
-        run: "echo $VERNUM"
-
-#      - name: Compress the files into a zip archive
-#        uses: thedoctor0/zip-release@master
-#        with:
-#          filename: "BroheimModpack-${{steps.version-number.outputs.result}}.zip"
-#          exclusions: "*.git*"
-        
-#      - name: Upload artifacts as release
-#        uses: ncipollo/release-action@v1
-#        with:
-#          artifacts: "BroheimModpack-${{steps.version-number.outputs.result}}.zip"
-#          token: ${{secrets.GITHUB_TOKEN}}
-#          tag: v${{steps.version-number.outputs.VERNUM}}
+      - name: Compress the files into a zip archive
+        uses: thedoctor0/zip-release@master
+        with:
+          filename: "BroheimModpack-${{env.VERNUM}}.zip"
+          exclusions: "*.git*"
+       
+      - name: Upload artifacts as release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "BroheimModpack-${{env.VERNUM}}.zip"
+          token: ${{secrets.GITHUB_TOKEN}}
+          tag: v${{env.VERNUM}}
