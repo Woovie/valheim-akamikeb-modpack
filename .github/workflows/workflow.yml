@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Get the version number
-        run: "VERNUM=$(awk -F'\"' '/version_number/ { print $4 }' manifest.json)"
+        run: echo "VERNUM=$(awk -F'\"' '/version_number/ { print $4 }' manifest.json)" >> $GITHUB_ENV
 
       - name: Test version output
         run: "echo $VERNUM"
