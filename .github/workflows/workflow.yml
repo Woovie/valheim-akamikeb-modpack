@@ -34,7 +34,7 @@ jobs:
           result-encoding: string
 
       - name: Test version output
-        runs: "echo ${{steps.version-number.outputs.result}}"
+        run: "echo ${{steps.version-number.outputs.result}}"
 
 #      - name: Compress the files into a zip archive
 #        uses: thedoctor0/zip-release@master
