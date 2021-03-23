@@ -1,13 +1,13 @@
 {
     "name": "BroheimModpack",
-    "version_number": "1.1.0",
+    "version_number": "1.1.1",
     "website_url": "https://discord.com/invite/akamikeb",
     "description": "A modpack for the akamikeb community",
     "dependencies": [
         "Smoothbrain-CreatureLevelAndLootControl-2.2.0",
         "RandyKnapp-EpicLoot-0.6.1",
         "ASharpPen-Custom_Raids-1.2.0",
-        "WeylandMod-WeylandMod_SharedMap-1.0.0",
+        "WeylandMod-WeylandMod_SharedMap-1.1.0",
         "denikson-BepInExPack_Valheim-5.4.900"
     ]
 }
