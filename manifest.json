@@ -1,10 +1,10 @@
 {
     "name": "BroheimModpack",
-    "version_number": "1.2.2",
+    "version_number": "1.2.3",
     "website_url": "https://discord.com/invite/akamikeb",
     "description": "A modpack for the akamikeb community",
     "dependencies": [
-        "Smoothbrain-CreatureLevelAndLootControl-2.4.2",
+        "Smoothbrain-CreatureLevelAndLootControl-2.2.0",
         "RandyKnapp-EpicLoot-0.6.3",
         "ASharpPen-Custom_Raids-1.2.0",
         "denikson-BepInExPack_Valheim-5.4.900",
